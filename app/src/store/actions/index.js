@@ -14,7 +14,6 @@ export const fetchRockets = () => {
       .get("https://api.spacexdata.com/v3/rockets")
       .then((res) => {
         // res.data
-        console.log(res.data[0], "from actions");
         dispatch({ type: FETCH_ROCKETS_SUCCESS, payload: res.data });
       })
       .catch((err) => console.log(err));
